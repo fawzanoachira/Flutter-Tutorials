@@ -1,5 +1,5 @@
 # Flutter Tutorials
-<img src="https://docs.flutter.dev/assets/images/branding/flutter/logo+text/horizontal/default.svg" width="120">
+<img src="https://docs.flutter.dev/assets/images/branding/flutter/logo+text/horizontal/default.svg" width="200">
 
 Welcome to my Flutter Tutorials repository! This repository contains my learnings and demonstrations of various Flutter components.
 
