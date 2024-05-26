@@ -6,8 +6,7 @@ Welcome to my Flutter Tutorials repository! This repository contains my learning
 
 - [Introduction](#introduction)
 - [Components Covered](#components-covered)
-- [Getting Started](#getting-started)
-- [Usage](#usage)
+- [Getting Started](#getting-started).
 - [Contributing](#contributing)
 - [License](#license)
 
