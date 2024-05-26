@@ -1,4 +1,5 @@
 # Flutter Tutorials
+![flutter logo](https://docs.flutter.dev/assets/images/branding/flutter/logo+text/horizontal/default.svg)
 
 Welcome to my Flutter Tutorials repository! This repository contains my learnings and demonstrations of various Flutter components.
 
