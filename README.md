@@ -6,9 +6,8 @@ Welcome to my Flutter Tutorials repository! This repository contains my learning
 
 - [Introduction](#introduction)
 - [Components Covered](#components-covered)
-- [Getting Started](#getting-started).
+- [Getting Started](#getting-started)
 - [Contributing](#contributing)
-- [License](#license)
 
 ## Introduction
 
@@ -34,6 +33,3 @@ To get started with these tutorials, you need to have Flutter installed on your 
     flutter run
 ## Contributing
 Contributions are welcome! If you have any suggestions or improvements, feel free to create an issue or submit a pull request.
-
-## License
-This project is licensed under the MIT License. See the LICENSE file for details.
