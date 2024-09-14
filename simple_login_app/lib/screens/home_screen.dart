@@ -1,10 +1,18 @@
 import 'package:flutter/material.dart';
 
-class ScreenHome extends StatelessWidget {
-  ScreenHome({super.key});
+class ScreenHome extends StatefulWidget {
+  const ScreenHome({super.key});
 
+  @override
+  State<ScreenHome> createState() => _ScreenHomeState();
+}
+
+class _ScreenHomeState extends State<ScreenHome> {
   final _userNameController = TextEditingController();
+
   final _passwordController = TextEditingController();
+
+  bool _isDataMatched = true;
 
   @override
   Widget build(BuildContext context) {
@@ -25,12 +33,22 @@ class ScreenHome extends StatelessWidget {
               obscureText: true,
               decoration: const InputDecoration(
                   border: OutlineInputBorder(), hintText: "Password")),
-          ElevatedButton.icon(
-              onPressed: () {
-                checkLogin(context);
-              },
-              label: const Text("Login"),
-              icon: const Icon(Icons.check))
+          Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            children: [
+              Visibility(
+                visible: !_isDataMatched,
+                child: const Text("Username and password doesn't match",
+                    style: TextStyle(color: Colors.red)),
+              ),
+              ElevatedButton.icon(
+                  onPressed: () {
+                    checkLogin(context);
+                  },
+                  label: const Text("Login"),
+                  icon: const Icon(Icons.check)),
+            ],
+          )
         ],
       ),
     )));
@@ -55,14 +73,19 @@ class ScreenHome extends StatelessWidget {
       showDialog(
           context: ctx,
           builder: (ctx1) => AlertDialog(
-                title: const Text("Error"),
-                content: const Text(errorMessage),
-                actions: [
-                  TextButton(
-                      onPressed: () => Navigator.of(ctx1).pop(),
-                      child: const Text("Close"))
-                ],
-              ));
+                  title: const Text("Error"),
+                  content: const Text(errorMessage),
+                  actions: [
+                    TextButton(
+                        onPressed: () => Navigator.of(ctx1).pop(),
+                        child: const Text("Close"))
+                  ]));
+
+      // Show Text
+
+      setState(() {
+        _isDataMatched = false;
+      });
     }
   }
 }
